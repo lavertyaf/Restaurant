@@ -47,6 +47,14 @@ public class WaiterTest {
         orders = waiter1.takeOrder(order1);
        assertEquals(1, orders.size());
     }
+//
+//    @Test
+//    public void canGiveOrderToKitchen(){
+//        waiter1.takeOrder(order1);
+//        waiter1.takeOrder(order2);
+//        Order orderIGot = waiter1.giveOrderToKitchen();
+//        assertEquals(1, orders.size());
+//    }
 
 
 }

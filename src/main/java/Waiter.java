@@ -23,6 +23,10 @@ public class Waiter {
     public ArrayList<Order> takeOrder(Order order){
         orders.add(order);
         return orders;
+    }
 
+    public Order giveOrderToKitchen() {
+
+        return this.orders.remove(0);
     }
 }
