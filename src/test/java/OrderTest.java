@@ -9,12 +9,13 @@ public class OrderTest {
 
     @Before
     public void before() {
-        order1 = new Order(7, 3, MenuItem.LATTE);
+        order1 = new Order(3, MenuItem.LATTE);
     }
 
     @Test
     public void hasOrderId(){
-        assertEquals(7, order1.getOrderId());
+        assertEquals(true, order1.getOrderId()<1000);
+        assertEquals(true, order1.getOrderId()>0);
     }
 
     @Test
@@ -26,6 +27,7 @@ public class OrderTest {
     public void hasMenuItem(){
         assertEquals(MenuItem.LATTE, order1.getMenuItem());
     }
+
 
 
 

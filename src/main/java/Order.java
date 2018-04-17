@@ -4,11 +4,11 @@ public class Order {
     private int quantity;
     private MenuItem menuItem;
 
-    public Order(int orderId, int quantity, MenuItem menuItem){
-        this.orderId = orderId;
+    public Order(int quantity, MenuItem menuItem){
         this.quantity = quantity;
         this.menuItem = menuItem;
-
+        int randomNumber = (int) (Math.random()*1000.00);
+        this.orderId = randomNumber;
     }
 
     public int getOrderId(){
