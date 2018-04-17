@@ -9,7 +9,7 @@ public class Waiter {
     public Waiter(String name, double bumBagCash, ArrayList<Order> orders){
         this.name = name;
         this.bumBagCash = bumBagCash;
-        this.orders = new ArrayList<>();
+        this.orders = orders;
     }
 
     public String getName() {
@@ -28,5 +28,8 @@ public class Waiter {
     public Order giveOrderToKitchen() {
 
         return this.orders.remove(0);
+    }
+    public int getOrdersSize(){
+        return orders.size();
     }
 }

@@ -20,16 +20,26 @@ public class KitchenTest {
         order1 = new Order(1, MenuItem.LASAGNE);
         dish1 = new Dish(MenuItem.LASAGNE);
         kitchen1 = new Kitchen(prep, pass);
-        waiter1 = new Waiter("Sergio", 70.00, prep);
+        ArrayList<Order> orders = new ArrayList<>();
+        orders.add(order1);
+        waiter1 = new Waiter("Sergio", 70.00, orders);
         prep = new ArrayList<Order>();
         pass = new ArrayList<Dish>();
     }
 
     @Test
+    public void kitchenStartsEmpty() {
+        assertEquals(0, kitchen1.getPrep().size());
+        assertEquals(1, waiter1.getOrdersSize());
+    }
+
+
+    @Test
     public void canAddOrderToPrepList(){
-        prep.add(order1);
+
         kitchen1.addOrderToKitchen(waiter1);
         assertEquals(1, kitchen1.getPrep().size());
+        assertEquals(0, waiter1.getOrdersSize());
     }
 
 
