@@ -9,7 +9,7 @@ public class CustomerTest {
 
     @Before
     public void before(){
-        customer1 = new Customer("Bob", 100.00);
+        customer1 = new Customer("Bob", 100.00, 2);
     }
 
     @Test
@@ -32,6 +32,11 @@ public class CustomerTest {
     public void canOrderItem(){
         Order orderToCheck = customer1.placeOrder();
         assertEquals(MenuItem.LETTUCE, orderToCheck.getMenuItem());
+    }
+
+    @Test
+    public void tableHasNumber(){
+        assertEquals(2, customer1.getTableNumber());
     }
 
 }
